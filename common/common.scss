@@ -1,4 +1,5 @@
-// import font - Aleksandr
+// import fonts - Aleksandr
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope');
 // add variables - Aleksandr
 :root {
@@ -16,12 +17,25 @@
   max-width: unset;
   color: var(--secondary);
   h1 {
-    font-size: 4em;
+    //"Welcome to the community" text - Aleksandr
+    font-size: 2.5em;
+    color: var(--primary-white-fffff, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+  // "Welcome to the community" text 
+    /* Card Header */
+    font-family: Rammetto One;
+
   }
   p {
-    font-size: 1.25em !important;
+    // "Welcome to the community" subtext - Aleksandr
+    font-size: 1em !important;
     font-weight: bold;
     margin-bottom: 1em;
+    font-family: Manrope;
+    font-weight: 400;
+    line-height: 150%; /* 30px */
+    // "Welcome to the community" subtext - Aleksandr
+
   }
   .btn {
     height: 100%;
@@ -285,12 +299,21 @@ html {
   }
 }
 
+
+// Body of the list of all posts - Aleksandr
 html body #main-outlet {
   margin-top: 30px;
   margin-bottom: 50px;
-  background: var(--secondary);
+  //background: var(--secondary);
+  background: var(--white);
   border-radius: 1em;
-  padding: 3em 3em 5%;
+  // padding: 3em 3em 5%;
+  padding-top: 0px !important;
+  
+  padding-left: 15px;
+  
+  padding-right: 15px;
+
   max-width: 1150px;
   .archetype-regular & {
     min-height: 500px;
@@ -300,7 +323,7 @@ html body #main-outlet {
     margin-top: 0;
   }
   padding-bottom: 5% !important; //overriding inline style
-  @include box-shadow;
+  //@include box-shadow;
   @media screen and (max-width: 1120px) {
     width: 80%;
   }
@@ -308,12 +331,12 @@ html body #main-outlet {
     width: 85%;
   }
 }
+// Body of the list of all posts
 
 .nav-pills:not(.user-nav) > li a.active,
 .nav-pills:not(.user-nav) > li > a {
   border-radius: 0.5em;
 }
-
 // Topic List
 
 @keyframes background-fade-highlight {
@@ -363,7 +386,7 @@ html body #main-outlet {
       width: 100%;
       display: flex;
       margin-bottom: 0.5em;
-      background-color: var(--secondary);
+      background-color: var(--white);
       border: 1px solid rgba(var(--primary-rgb), 0.2);
       border-radius: 1em;
       position: relative;
@@ -607,6 +630,36 @@ html body #main-outlet {
 }
 // Active Button 
 
+
+// Category Boxes - Aleksandr
+
+.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box {
+  border: 1px solid var(--black) !important;
+  border-radius: 0px !important;
+  padding: 10px 10px;
+  box-shadow: none !important;
+  background-color: var(--white); 
+  min-width: 135px !important;
+}
+
+.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box:hover{
+  transform: scale(1.005);
+  background-color: var(--white); 
+}
+
+.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner .category-logo.no-logo-present {
+  display: none;
+}
+.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner{
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* Pills */
+  font-family: Manrope !important;
+  
+  }
+
+// Category Boxes 
 
 
 // Change Main Page Background - Aleksandr
