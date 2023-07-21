@@ -1,3 +1,13 @@
+// import font - Aleksandr
+@import url('https://fonts.googleapis.com/css2?family=Manrope');
+// add variables - Aleksandr
+:root {
+  --primary-blue-mid: #44A1E5;
+  --primary-orange-light: #F3AC5B;
+  --white: #FFFFFF;
+}
+
+
 // custom search banner customizations
 .custom-search-banner-wrap {
   margin: 0 auto !important;
@@ -146,7 +156,32 @@ input[type="color"],
 .d-editor-textarea-wrapper,
 div.ac-wrap {
   border-radius: 4px;
+
+  // Categories - Aleksandr
+  display: flex;
+  padding: 4px 8px;
+  align-items: center;
+  gap: 8px;
+  border-color: var(--primary-blue-mid);
+  border-radius: 8px;
+  border: 1px solid var(--primary-blue-mid, #44A1E5);
+  background: #FFF;
+
+  color: var(--primary-blue-mid);
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  // Categories
 }
+
+
+// SVG Arrow for Categories - Aleksandr
+.select-kit-header-wrapper > svg {
+  height: 22px;
+}
+// SVG Arrow for Categories
+
 .d-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 }
@@ -536,3 +571,11 @@ html body #main-outlet {
 .topic-list .main-link.focused {
   box-shadow: none;
 }
+
+
+// Active Button - Aleksandr
+.active {
+  border-radius: 16px;
+  background: var(--primary-orange-light) !important;
+}
+// Active Button 
