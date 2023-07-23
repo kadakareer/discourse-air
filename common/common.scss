@@ -5,6 +5,7 @@
 :root {
   --primary-blue-mid: #44A1E5;
   --primary-orange-light: #F3AC5B;
+  --primary-orange-default: #EB864C;
   --white: #FFFFFF;
   --grey: #8e8e8e;
   --black: #000000;
@@ -624,12 +625,15 @@ html body #main-outlet {
 
 
 // Active Button - Aleksandr
-.active {
+.nav > li > a.active {
   border-radius: 16px;
   background: var(--primary-orange-light) !important;
 }
+.nav > li > a:hover {
+  color: var(--white) !important;
+  background: var(--primary-orange-default) !important;
+}
 // Active Button 
-
 
 // Category Boxes - Aleksandr
 
