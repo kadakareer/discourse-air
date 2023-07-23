@@ -423,7 +423,8 @@ html body #main-outlet {
       }
       &:hover {
         //background-color: var(--secondary);
-        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+        //box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 2px 0px 0px #8EC8EF;
         //border: 1px solid rgba(var(--primary-rgb), 0.3);
         //a.title:not(.badge-notification),
         //a.topic-excerpt {
@@ -624,7 +625,9 @@ html body #main-outlet {
 }
 
 
-// Active Button - Aleksandr
+// Buttons - Aleksandr
+
+  // Navigation Buttons
 .nav > li > a.active {
   border-radius: 16px;
   background: var(--primary-orange-light) !important;
@@ -633,7 +636,25 @@ html body #main-outlet {
   color: var(--white) !important;
   background: var(--primary-orange-default) !important;
 }
-// Active Button 
+  // Navigation Buttons
+
+
+  // Default Buttons
+.btn.btn-default{
+  color: var(--white) !important;
+  border-radius: 16px;
+  background: var(--primary-orange-light) !important;
+}
+.btn.btn-default:hover{
+  color: var(--white) !important;
+  background: var(--primary-orange-default) !important;
+}
+.btn.btn-default>svg{
+  fill: var(--white) !important;
+}
+  // Default Buttons
+
+// Buttons 
 
 // Category Boxes - Aleksandr
 
