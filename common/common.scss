@@ -9,6 +9,8 @@
   --white: #FFFFFF;
   --grey: #8e8e8e;
   --black: #000000;
+
+  --primary-high-or-secondary-low: var(--black) !important; 
 }
 
 
@@ -697,7 +699,118 @@ html body #main-outlet {
   background-size: 100%;
   background-position: 0px -40%;
 }
+// Change Main Page Background 
 
+// Change the way post looks like - Aleksandr
+#main-outlet > .regular{
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  border: 0px solid #000;
+  background: #FFF;
+}
+
+// Main post container
+.container.posts{
+  padding: 16px;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: #FFF;
+  box-shadow: 4px 4px 0px 0px #8EC8EF;
+}
+
+// Post content and comments container
+.post-stream{
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+// All comments
+.post-stream > *:not(:first-child) > * > * > .topic-body  {
+  margin-left: 8px;
+  margin-right: 64px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 16px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: var(--white, #FFF);
+}
+
+// Topic block
+.topic-post.clearfix.topic-owner.regular{
+  padding-top: 0px;
+}
+
+// Topic avatar
+.topic-body.clearfix, .topic-avatar{
+  border-top: none;
+}
+
+// Topic title
+#main-outlet > .regular > #topic-title{
+  padding: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #000;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 4px 4px 0px 0px #8EC8EF;
+  background-color: var(--white);
+}
+
+// Topic avatar
+.topic-avatar {
+  padding-top: 0px;
+}
+
+
+.topic-timer-info{
+  display: none;
+}
+
+.post-menu-area.clearfix{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+// Topic block inner
+.topic-map{
+  border: 0px solid #000;
+}
+
+// Topic block inner
+.topic-map section{
+  margin: 32px 8px 8px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid var(--black) !important;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0px 0px #8EC8EF;
+  scale: 1.15;
+  background-color: var(--white);
+}
+
+
+// Change the way post looks like 
+.username{
+  color: var(--black) !important;
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* headings/H4 */
+  //font-family: Stinger Fit;
+  font-family: Rammetto One;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 @media screen and (max-width: 1450px) {
   .discourse-root{
