@@ -16,7 +16,7 @@
 
 // custom search banner customizations
 .custom-search-banner-wrap {
-  margin: 0 auto !important;
+  padding: 48px 0px 0px 0px !important;
   max-width: unset;
   color: var(--secondary);
   h1 {
@@ -203,7 +203,9 @@ div.ac-wrap {
 
 .d-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--black);
 }
+
 
 .d-header-icons .d-icon {
   border-radius: 100px;
@@ -309,7 +311,7 @@ html body #main-outlet {
   margin-bottom: 50px;
   //background: var(--secondary);
   background: var(--white);
-  border-radius: 1em;
+  border-radius: 8px;
   // padding: 3em 3em 5%;
   padding-top: 0px !important;
   
@@ -669,9 +671,11 @@ html body #main-outlet {
   min-width: 135px !important;
 }
 
+
 .custom-category-boxes:not(.above-discovery-categories-outlet) .category-box:hover{
   transform: scale(1.005);
   background-color: var(--white); 
+  box-shadow: 4px 4px 0px 0px #8EC8EF !important;
 }
 
 .custom-category-boxes:not(.above-discovery-categories-outlet) .category-box .category-box-inner .category-logo.no-logo-present {
