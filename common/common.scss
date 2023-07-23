@@ -1,5 +1,10 @@
 // import fonts - Aleksandr
 @import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@font-face {
+  font-family: 'Stinger-Fit-Regular';
+  src: url('https://uploads-ssl.webflow.com/625039ed60369d0b7b026157/6256010745d3083405759e31_Stinger-Fit-Regular.woff') format('woff');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope');
 // add variables - Aleksandr
 :root {
@@ -21,12 +26,15 @@
   color: var(--secondary);
   h1 {
     //"Welcome to the community" text - Aleksandr
-    font-size: 2.5em;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     color: var(--primary-white-fffff, #FFF);
     font-feature-settings: 'clig' off, 'liga' off;
   // "Welcome to the community" text 
     /* Card Header */
-    font-family: Rammetto One;
+    font-family: Stinger-Fit-Regular;
 
   }
   p {
@@ -770,6 +778,7 @@ html body #main-outlet {
   background-color: var(--white);
 }
 
+
 // Topic avatar
 .topic-avatar {
   padding-top: 0px;
@@ -809,11 +818,12 @@ html body #main-outlet {
   font-feature-settings: 'clig' off, 'liga' off;
   /* headings/H4 */
   //font-family: Stinger Fit;
-  font-family: Rammetto One;
-  font-size: 16px;
+  font-family: Stinger-Fit-Regular;
+  font-size: 20px !important;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 4px;
 }
 
 @media screen and (max-width: 1450px) {
