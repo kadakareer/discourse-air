@@ -9,12 +9,12 @@
 // add variables - Aleksandr
 :root {
   --primary-blue-mid: #44A1E5;
-  --primary-orange-light: #F3AC5B;
-  --primary-orange-default: #EB864C;
+  --primary-orange-light: #EB864C;
+  --primary-orange-default: #F3AC5B;
   --white: #FFFFFF;
   --grey: #8e8e8e;
   --black: #000000;
-
+  --d-selected: #45a1e5;
   --primary-high-or-secondary-low: var(--black) !important; 
 }
 
@@ -22,10 +22,20 @@
 // custom search banner customizations
 .custom-search-banner-wrap {
   padding: 48px 0px 0px 0px !important;
-  max-width: unset;
+  max-width: unset;     
+  background-image: url($banner_no_outline_no_background_white_text);      
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  // width: 100vw;
+  // height: 200px;
+  height: 300px;
+  //background-color: #f0f7fb; 
+
   color: var(--secondary);
   h1 {
     //"Welcome to the community" text - Aleksandr
+    display: none; //show nothing
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
@@ -39,6 +49,7 @@
   }
   p {
     // "Welcome to the community" subtext - Aleksandr
+    display: none; //show nothing
     font-size: 1em !important;
     font-weight: bold;
     margin-bottom: 1em;
@@ -395,6 +406,7 @@ html body #main-outlet {
   }
   .topic-list-body {
     display: contents;
+  
     .topic-list-item-separator {
       width: 100%;
       margin: 0.75em 0;
@@ -409,18 +421,19 @@ html body #main-outlet {
       display: flex;
       margin-bottom: 0.5em;
       background-color: var(--white);
-      border: 1px solid rgba(var(--primary-rgb), 0.2);
-      border-radius: 1em;
+      // border: 1px solid rgba(var(--primary-rgb), 0.2);
       position: relative;
-      transition: box-shadow 100ms ease-in-out;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
-
+      //box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+      
       // Border and transition - Aleksandr
       overflow: hidden;
-      border-radius: 8px;
-      border: 1px solid #000;
-      transition: transform 0.3s ease;
+      border-radius: 1em;
+      // border: 1px solid #000;
+      transition: all 0.3s ease-in-out;
+      transition: box-shadow 0.2s ease-in-out;
       //
+      border: none;
+
 
       a.topic-excerpt {
         color: var(--black);
@@ -445,7 +458,8 @@ html body #main-outlet {
       &:hover {
         //background-color: var(--secondary);
         //box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-        box-shadow: 2px 2px 0px 0px #8EC8EF;
+        box-shadow: 4px 4px 0px 0px #8EC8EF;
+        border: 1px solid #000;
         //border: 1px solid rgba(var(--primary-rgb), 0.3);
         //a.title:not(.badge-notification),
         //a.topic-excerpt {
@@ -682,7 +696,6 @@ html body #main-outlet {
 .custom-category-boxes:not(.above-discovery-categories-outlet) .category-box {
   border: 1px solid var(--black) !important;
   border-radius: 0px !important;
-  padding: 10px 10px;
   box-shadow: none !important;
   background-color: var(--white); 
   min-width: 135px !important;
@@ -704,8 +717,9 @@ html body #main-outlet {
   margin-bottom: auto;
   /* Pills */
   font-family: Manrope !important;
-  
-  }
+  gap: 16px !important;
+  padding-right: 16px !important;
+}
 
 // Category Boxes 
 
@@ -739,9 +753,8 @@ html body #main-outlet {
   padding: 16px;
   gap: 8px;
   border-radius: 8px;
-  border: 1px solid #000;
+  //border: 1px solid #000;
   background: #FFF;
-  box-shadow: 4px 4px 0px 0px #8EC8EF;
 }
 
 // Post content and comments container
@@ -762,7 +775,7 @@ html body #main-outlet {
   padding-top: 16px;
   border-radius: 8px;
   border: 1px solid #000;
-  background: var(--white, #FFF);
+  background-color: #fffdf6;
 }
 
 // Topic block
@@ -772,6 +785,7 @@ html body #main-outlet {
 
 // Topic avatar
 .topic-body.clearfix, .topic-avatar{
+  padding-right: 8px;
   border-top: none;
 }
 
@@ -815,11 +829,77 @@ html body #main-outlet {
   padding: 0px 0px 0px 0px;
   border: 1px solid var(--black) !important;
   border-radius: 8px;
-  box-shadow: 2px 2px 0px 0px #8EC8EF;
+  box-shadow: 4px 4px 0px 0px #8EC8EF;
   scale: 1.15;
   background-color: var(--white);
 }
 
+
+// Menu with buttons, add padding
+.menu-tabs-container > *{
+  padding: 8px;
+}
+
+// Buttons in the menu, add margin
+.user-menu-tab{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+// Active icon
+.user-menu-tab.active > svg{
+  fill: white; 
+}
+
+
+// Notifcation color to red
+.chat-channel-unread-indicator{
+  background-color: red !important;
+}
+.badge-notification{
+  background-color: red !important;
+}
+
+
+.d-editor-button-bar > *{
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+  height: 39px;
+  width: 36px;
+  // height: 30px !important;
+  // width: 30px !important;
+}
+
+// Notifications
+.reviewable.pending{
+  border-radius: 8px !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+
+// User settings
+.quick-access-panel > * > * {
+  border-radius: 8px !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+}
+
+.nav-pills.action-list.main-nav.user-nav > * > *{
+  border-radius: 0px !important;
+  background-color: white !important;
+}
+.nav-pills.action-list.main-nav.user-nav > * > *:hover{
+  color: black !important;
+}
+
+.nav-pills.action-list > * > *{
+  border-radius: 0px !important;
+}
+//User settings
 
 // Change the way post looks like 
 .username{
@@ -835,23 +915,79 @@ html body #main-outlet {
   margin-bottom: 4px;
 }
 
-@media screen and (max-width: 768px) {
+// Fix "categories" image sizes
+.category-logo > img {
+  width: fit-content !important;
+}
+
+
+// Fix navigation pill: reverse select and active color + add spacing
+.admin-main-nav  > .nav.nav-pills {
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.admin-controls > nav > .nav.nav-pills {
+  gap: 8px;
+}
+
+// .admin-main-nav  > .nav.nav-pills > li > a.active {
+//   background-color: var(--primary-orange-default) !important;
+// }
+// .admin-main-nav > .nav.nav-pills > li > a:hover{
+//   background-color: var(--primary-orange-light)  !important;
+// }
+// Fix navigation pill: reverse select and active color + add spacing
+
+
+// Hide search widget
+.search-widget{
+  display: none !important;
+}
+
+@media screen and (max-width: 800px) {
   html{
     .background-container{
       height: 0vh;
     }
   }
 
-  .custom-search-banner{
-      background-image: url("data:image/svg+xml,%3Csvg width='375' height='251' viewBox='0 0 375 251' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2_4130)'%3E%3Cpath d='M111.125 240.25C112.851 240.25 114.25 238.851 114.25 237.125C114.25 235.399 112.851 234 111.125 234C109.399 234 108 235.399 108 237.125C108 238.851 109.399 240.25 111.125 240.25Z' fill='white'/%3E%3Cpath d='M111.125 240.25C112.851 240.25 114.25 238.851 114.25 237.125C114.25 235.399 112.851 234 111.125 234C109.399 234 108 235.399 108 237.125C108 238.851 109.399 240.25 111.125 240.25Z' fill='white'/%3E%3Cpath d='M262.562 52.125C263.425 52.125 264.125 51.4254 264.125 50.5625C264.125 49.6996 263.425 49 262.562 49C261.699 49 261 49.6996 261 50.5625C261 51.4254 261.699 52.125 262.562 52.125Z' fill='white'/%3E%3Cpath d='M242.597 0.0683406C140.221 -1.82631 147.592 36.0668 17.3693 64.8655C-37.0949 75.0966 -118.996 95.18 -104.254 165.282C-89.5116 235.384 21.8738 192.565 140.63 237.279C259.387 281.993 422.206 210.754 415.818 119.81C410.494 44.0243 344.973 1.963 242.597 0.0683406Z' fill='%2300497A'/%3E%3Cpath d='M8.5 149.625C10.2259 149.625 11.625 148.226 11.625 146.5C11.625 144.774 10.2259 143.375 8.5 143.375C6.77411 143.375 5.375 144.774 5.375 146.5C5.375 148.226 6.77411 149.625 8.5 149.625Z' fill='white'/%3E%3Cpath d='M326.125 178.25C327.851 178.25 329.25 176.851 329.25 175.125C329.25 173.399 327.851 172 326.125 172C324.399 172 323 173.399 323 175.125C323 176.851 324.399 178.25 326.125 178.25Z' fill='white'/%3E%3Cpath d='M56.5625 183.125C57.4254 183.125 58.125 182.425 58.125 181.562C58.125 180.699 57.4254 180 56.5625 180C55.6996 180 55 180.699 55 181.562C55 182.425 55.6996 183.125 56.5625 183.125Z' fill='white'/%3E%3Cpath d='M193.562 41.125C194.425 41.125 195.125 40.4254 195.125 39.5625C195.125 38.6996 194.425 38 193.562 38C192.699 38 192 38.6996 192 39.5625C192 40.4254 192.699 41.125 193.562 41.125Z' fill='white'/%3E%3Cpath d='M80.5625 61.125C81.4254 61.125 82.125 60.4254 82.125 59.5625C82.125 58.6996 81.4254 58 80.5625 58C79.6996 58 79 58.6996 79 59.5625C79 60.4254 79.6996 61.125 80.5625 61.125Z' fill='white'/%3E%3Cpath d='M357.562 43.125C358.425 43.125 359.125 42.4254 359.125 41.5625C359.125 40.6996 358.425 40 357.562 40C356.699 40 356 40.6996 356 41.5625C356 42.4254 356.699 43.125 357.562 43.125Z' fill='white'/%3E%3Cpath d='M213.562 217.125C214.425 217.125 215.125 216.425 215.125 215.562C215.125 214.699 214.425 214 213.562 214C212.699 214 212 214.699 212 215.562C212 216.425 212.699 217.125 213.562 217.125Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2_4130'%3E%3Crect width='375' height='251' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: 0% 0px;
-      height: 300px !important;
+  .custom-search-banner-wrap{
+    background-image: none;
+    height: fit-content;
   }
+
+  .custom-search-banner{
+      background-image: url($banner_no_outline);      
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      // width: 100vw;
+      // height: 200px;
+      width: 100%; /* Adjust as needed */
+      padding-top: 32%; /* Maintain the aspect ratio (height / width) */
+      background-color: #f0f7fb;
+  }
+
+  #main-outlet{
+    margin-top: 0px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
   .custom-search-banner > * {
     padding-top: 64px !important;
   }
+
+  .user-content{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #main-outlet-wrapper {
+    margin: 0px !important;
+  }
+ 
 }
   
 // Change Main Page Background 
